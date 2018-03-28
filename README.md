@@ -9,7 +9,7 @@ Just go into one of the examples subfolders, and run `docker-compose up`! That's
 
 
 ## Examples
-* `greet-client-server`: client sends a name for the server, and the server replies with a greeting. Client name is passed as an env variable in the `docker-compose.yml`.
+* `greeter`: client sends a name for the server, and the server replies with a greeting. Client name is passed as an env variable in the `docker-compose.yml`.
 
 
 ## Requirements
