@@ -10,7 +10,7 @@ import greet.grpc.GreeterOuterClass;
 import io.grpc.stub.StreamObserver;
 
 @Slf4j
-@GRpcService
+@GRpcService(interceptors = { LogInterceptor.class , NonBeanInterceptor.class })
 public class Server extends GreeterGrpc.GreeterImplBase {
 
     @Override

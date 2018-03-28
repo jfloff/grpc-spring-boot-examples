@@ -1,0 +1,17 @@
+
+version: '3'
+services:
+    server:
+        build: ./server
+        volumes:
+            - './server:/home/server'
+        expose:
+            - '6565'
+
+    client:
+        build: ./client
+        # command: bash -c "sleep 30 && catalina.sh run"
+        volumes:
+            - './client:/home/client'
+        environment:
+            GREET_NAME: 'Kenobi'

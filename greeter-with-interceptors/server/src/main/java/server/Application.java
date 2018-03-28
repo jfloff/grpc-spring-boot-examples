@@ -1,16 +1,21 @@
-package client;
+package server;
 
+
+import org.lognet.springboot.grpc.GRpcService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
-
-import org.lognet.springboot.grpc.GRpcService;
-import io.grpc.stub.StreamObserver;
+import org.springframework.context.annotation.Bean;
 
 
 @SpringBootApplication
 public class Application extends SpringBootServletInitializer {
+
+    // @Bean
+    // public Server service() {
+	// 	return new Server();
+	// }
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {

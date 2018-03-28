@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option java_package = "greet.grpc";
+
+// The greeter service definition.
+service Greeter {
+    rpc greet ( Name ) returns ( Greeting ) {}
+}
+
+message Name {
+    string name = 1;
+}
+
+message Greeting {
+    string message = 1;
+}

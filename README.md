@@ -1,16 +1,21 @@
 # gRPC Spring Boot Examples
 
-Collection of working examples of [gRPC](http://www.grpc.io) application running on top of [Spring Boot](https://projects.spring.io/spring-boot/). We used the [LogNet/grpc-spring-boot-starter](https://github.com/LogNet/grpc-spring-boot-starter), and ported available examples to work OOTB. We added a client service to all the examples. We also setup a Docker-ready deployment. Running examples is now easy peasy lemon squeezy!
+Collection of working examples of [gRPC](http://www.grpc.io)-based applications running on top of [Spring Boot](https://projects.spring.io/spring-boot/). We used the [LogNet/grpc-spring-boot-starter](https://github.com/LogNet/grpc-spring-boot-starter) gradle plugin, and ported available examples to work OOTB.
+
+Although the provided examples have unit tests that work as clients, we adopt a more in-action example and add a client service. This is useful when you want to bootstrap microservices. We also setup a Docker-ready deployment.
 
 **Feel free to submit a PR for other examples or improvements existing ones!**
 
 ## Run
-Just go into one of the examples subfolders, and run `docker-compose up`! That's it!
+Running examples is easy peasy lemon squeezy! Just go into one of the examples subfolders, and **run `docker-compose up`**! That's it!
 
 
 ## Examples
-* `greeter`: client sends a name for the server, and the server replies with a greeting. Client name is passed as an env variable in the `docker-compose.yml`.
+* **`greeter`**: client sends a name for the server, and the server replies with a greeting. Client name is passed as an env variable in the `docker-compose.yml`. Based on [LogNet/grpc-spring-boot-starter examples](https://github.com/LogNet/grpc-spring-boot-starter/tree/master/grpc-spring-boot-starter-demo).
 
+* **`greeter-interceptors`**: Same as greeter but we add an interceptor to the server(`NonBeanInterceptor.java`) even though server is not a `@Bean`. Based on [LogNet/grpc-spring-boot-starter examples](https://github.com/LogNet/grpc-spring-boot-starter/tree/master/grpc-spring-boot-starter-demo).
+
+* **`greeter-bean-interceptors`**: Same as greeter but we add an interceptor to the server(`LogInterceptor.java`). Based on [LogNet/grpc-spring-boot-starter examples](https://github.com/LogNet/grpc-spring-boot-starter/tree/master/grpc-spring-boot-starter-demo).
 
 ## Requirements
 
