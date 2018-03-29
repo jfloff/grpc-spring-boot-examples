@@ -62,11 +62,11 @@ sourceSets {
 
 protobuf {
     protoc {
-        path = "/usr/bin/protoc"
+        path = "${protocPath}"
     }
     plugins {
         grpc {
-            path = "/usr/local/bin/protoc-gen-grpc-java"
+            path = "${grpcPluginPath}"
         }
     }
 
