@@ -36,12 +36,12 @@ public class Client {
     // this simulates a new client sending a message
     // realistic these clients come all the time
     @EventListener(ApplicationReadyEvent.class)
-    public void startup() {
+    public void startup() throws InterruptedException {
         this.greet(this.name);
         System.exit(0);
     }
 
-    public void greet(String name) {
+    public void greet(String name) throws InterruptedException {
         log.info("Will try to greet " + name + " ...");
 
         // build message
