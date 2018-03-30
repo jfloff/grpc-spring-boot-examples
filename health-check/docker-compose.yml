@@ -1,0 +1,14 @@
+
+version: '3'
+services:
+    server:
+        build: ./server
+        volumes:
+            - './server:/home/server'
+        expose:
+            - '6565'
+
+    client:
+        build: ./client
+        volumes:
+            - './client:/home/client'
