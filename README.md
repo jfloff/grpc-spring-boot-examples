@@ -19,6 +19,8 @@ Running examples is easy peasy lemon squeezy! Just go into one of the examples s
 
 * **`calculator`**: Standard calculator, we parse the calculation form an env variable on the client, and then we send the parcels over to the server. Based on [LogNet/grpc-spring-boot-starter examples](https://github.com/LogNet/grpc-spring-boot-starter/tree/master/grpc-spring-boot-starter-demo).
 
+* **`health-check`**: implementation of gRPC health checking protocol. Each 5 seconds the server randomly answers with one of the possible status. Proto definition at [oficial grpc documentation](https://github.com/grpc/grpc/blob/master/doc/health-checking.md).
+
 ## Requirements
 
 Our Docker images are based on [jfloff/docker-thrike](https://github.com/jfloff/docker-thrike) which already everything we need set up, namely: Tomcat, Gradle, Protobuf and gRPC. If you want to bypass Docker and deploy on our own machine, check the [Dockerfile at jfloff/docker-thrike](https://github.com/jfloff/docker-thrike/blob/master/8.5/Dockerfile) for some hints on how to setup your system.
