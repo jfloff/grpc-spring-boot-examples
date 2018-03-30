@@ -17,6 +17,8 @@ Running examples is easy peasy lemon squeezy! Just go into one of the examples s
 
 * **`greeter-bean-interceptors`**: Same as greeter but we add an interceptor to the server(`LogInterceptor.java`). Based on [LogNet/grpc-spring-boot-starter examples](https://github.com/LogNet/grpc-spring-boot-starter/tree/master/grpc-spring-boot-starter-demo).
 
+* **`calculator`**: Standard calculator, we parse the calculation form an env variable on the client, and then we send the parcels over to the server. Based on [LogNet/grpc-spring-boot-starter examples](https://github.com/LogNet/grpc-spring-boot-starter/tree/master/grpc-spring-boot-starter-demo).
+
 ## Requirements
 
 Our Docker images are based on [jfloff/docker-thrike](https://github.com/jfloff/docker-thrike) which already everything we need set up, namely: Tomcat, Gradle, Protobuf and gRPC. If you want to bypass Docker and deploy on our own machine, check the [Dockerfile at jfloff/docker-thrike](https://github.com/jfloff/docker-thrike/blob/master/8.5/Dockerfile) for some hints on how to setup your system.

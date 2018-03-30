@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+option java_package = "calculator.grpc";
+
+service Calculator {
+  rpc calculate(Math) returns (Result) {}
+}
+
+message Math {
+  double number1 = 1;
+  double number2 = 2;
+  OperationType operation = 3;
+
+  enum OperationType {
+    ADD = 0;
+    SUBTRACT = 1;
+    MULTIPLY = 2;
+    DIVIDE = 3;
+  }
+}
+
+message Result {
+  double result = 1;
+}

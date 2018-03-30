@@ -1,0 +1,17 @@
+
+version: '3'
+services:
+    calculator:
+        build: ./calculator
+        volumes:
+            - './calculator:/home/calculator'
+        expose:
+            - '6565'
+
+    client:
+        build: ./client
+        # command: bash -c "sleep 30 && catalina.sh run"
+        volumes:
+            - './client:/home/client'
+        environment:
+            CALCULATION: '10/2'
