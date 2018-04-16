@@ -1,0 +1,16 @@
+
+version: '3'
+services:
+    pong:
+        build: ./pong
+        volumes:
+            - './pong:/home/pong'
+        expose:
+            - '6565'
+
+    ping:
+        build: ./ping
+        volumes:
+            - './ping:/home/ping'
+        expose:
+            - '6565'

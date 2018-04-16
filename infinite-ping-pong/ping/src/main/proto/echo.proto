@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+option java_package = "echo.grpc";
+
+// The echo service definition.
+service Echo {
+    rpc echo ( Message ) returns ( Message ) {}
+}
+
+message Message {
+    string message = 1;
+}

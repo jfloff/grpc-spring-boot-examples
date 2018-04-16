@@ -13,13 +13,15 @@ Running examples is easy peasy lemon squeezy! Just go into one of the examples s
 ## Examples
 * **`greeter`**: client sends a name for the server, and the server replies with a greeting. Client name is passed as an env variable in the `docker-compose.yml`. Based on [LogNet/grpc-spring-boot-starter examples](https://github.com/LogNet/grpc-spring-boot-starter/tree/master/grpc-spring-boot-starter-demo).
 
-* **`greeter-interceptors`**: Same as greeter but we add an interceptor to the server(`NonBeanInterceptor.java`) even though server is not a `@Bean`. Based on [LogNet/grpc-spring-boot-starter examples](https://github.com/LogNet/grpc-spring-boot-starter/tree/master/grpc-spring-boot-starter-demo).
+* **`greeter-interceptors`**: same as greeter but we add an interceptor to the server(`NonBeanInterceptor.java`) even though server is not a `@Bean`. Based on [LogNet/grpc-spring-boot-starter examples](https://github.com/LogNet/grpc-spring-boot-starter/tree/master/grpc-spring-boot-starter-demo).
 
-* **`greeter-bean-interceptors`**: Same as greeter but we add an interceptor to the server(`LogInterceptor.java`). Based on [LogNet/grpc-spring-boot-starter examples](https://github.com/LogNet/grpc-spring-boot-starter/tree/master/grpc-spring-boot-starter-demo).
+* **`greeter-bean-interceptors`**: same as greeter but we add an interceptor to the server(`LogInterceptor.java`). Based on [LogNet/grpc-spring-boot-starter examples](https://github.com/LogNet/grpc-spring-boot-starter/tree/master/grpc-spring-boot-starter-demo).
 
-* **`calculator`**: Standard calculator, we parse the calculation form an env variable on the client, and then we send the parcels over to the server. Based on [LogNet/grpc-spring-boot-starter examples](https://github.com/LogNet/grpc-spring-boot-starter/tree/master/grpc-spring-boot-starter-demo).
+* **`calculator`**: standard calculator, we parse the calculation form an env variable on the client, and then we send the parcels over to the server. Based on [LogNet/grpc-spring-boot-starter examples](https://github.com/LogNet/grpc-spring-boot-starter/tree/master/grpc-spring-boot-starter-demo).
 
 * **`health-check`**: implementation of gRPC health checking protocol. Each 5 seconds the server randomly answers with one of the possible status. Proto definition at [oficial grpc documentation](https://github.com/grpc/grpc/blob/master/doc/health-checking.md).
+
+* **`infinite-pingpong`**: an infinite ping-pong between *two* gRPC services. This emulates the microservice ecosystem where services are both clients and servers at the same time.
 
 ## Requirements
 
