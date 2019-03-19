@@ -94,7 +94,7 @@ task cleanGenerated{
 }
 clean.dependsOn cleanGenerated
 
-task dependencies(type: Exec) {
+task getDependencies(type: Exec) {
     configurations.testRuntime.files
     commandLine 'echo', 'Downloaded all dependencies'
 }

@@ -8,7 +8,7 @@ LABEL maintainer="jfloff@inesc-id.pt"
 WORKDIR /home/ping
 # cache gradle build dependencies - is less often changed than code
 ADD build.gradle /home/ping
-RUN gradle dependencies
+RUN gradle getDependencies
 # add all code and build
 ADD . /home/ping
 RUN gradle build && \

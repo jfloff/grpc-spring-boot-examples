@@ -8,7 +8,7 @@ LABEL maintainer="jfloff@inesc-id.pt"
 WORKDIR /home/calculator
 # cache gradle build dependencies - is less often changed than code
 ADD build.gradle /home/calculator
-RUN gradle dependencies
+RUN gradle getDependencies
 # add all code and build
 ADD . /home/calculator
 RUN gradle build && \
